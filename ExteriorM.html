@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exterior Architecture Project</title>
+  <style>
+    /* ==== THEME COLORS ==== */
+    :root {
+      --bg-dark: #121212;
+      --bg-black: #000000;
+      --neon-blue: #00F7FF;
+      --electric-blue: #00C3FF;
+      --dodger-blue: #1E90FF;
+      --white: #FFFFFF;
+      --light-blue: #ADD8E6;
+      --cyan: #00FFFF;
+      --gradient-start: #0072FF;
+      --gradient-end: #00C6FF;
+      --glow-shadow: rgba(0, 242, 255, 0.8);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-dark);
+      color: var(--light-blue);
+    }
+
+    /* ==== NAVBAR ==== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-black);
+      padding: 1rem 2rem;
+      border-bottom: 2px solid var(--electric-blue);
+      box-shadow: 0 0 15px var(--glow-shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav h2 {
+      color: var(--neon-blue);
+      text-shadow: 0 0 10px var(--electric-blue);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--light-blue);
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--white);
+      text-shadow: 0 0 10px var(--neon-blue);
+    }
+
+    /* ==== HERO SECTION ==== */
+    .hero {
+      position: relative;
+      height: 80vh;
+      background: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      color: var(--neon-blue);
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--electric-blue);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    /* ==== MAIN SECTION ==== */
+    main {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 15px;
+      border: 1px solid var(--dodger-blue);
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: all 0.4s ease-in-out;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .card:hover {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      box-shadow: 0 0 25px var(--glow-shadow), 0 0 50px var(--electric-blue);
+      transform: translateY(-10px) scale(1.05);
+      color: var(--white);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px var(--glow-shadow);
+    }
+
+    .card h2 {
+      color: var(--electric-blue);
+      text-shadow: 0 0 10px var(--neon-blue);
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      color: var(--white);
+      background: var(--bg-black);
+      border: 2px solid var(--neon-blue);
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px var(--neon-blue);
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+      box-shadow: 0 0 20px var(--electric-blue), 0 0 40px var(--glow-shadow);
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--bg-black);
+      color: var(--cyan);
+      margin-top: 2rem;
+      border-top: 2px solid var(--electric-blue);
+      box-shadow: 0 0 15px var(--glow-shadow);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h2>DesignNest</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-text">Exterior DesignNest Project</div>
+  </section>
+
+  <!-- MAIN SECTION -->
+  <main id="about">
+    <div class="card">
+      <a href="#"><img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353" alt="Building Facade"></a>
+      <h2>Building Facade</h2>
+      <p>Modern front look with glass walls, textured finishes, and balcony designs.</p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+
+    <div class="card">
+      <a href="#"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914" alt="Roof Design"></a>
+      <h2>Roof Design</h2>
+      <p>Flat, sloped, and green roofs with solar panel integration and neon edge lighting.</p>
+      <a href="#" class="btn">Explore</a>
+    </div>
+
+    <div class="card">
+      <a href="#"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Landscape"></a>
+      <h2>Landscape & Garden</h2>
+      <p>Green lawns, fountains, neon pathway lights, and modern boundary designs.</p>
+      <a href="#" class="btn">View Ideas</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <p>© 2025 Exterior Architecture | Designed in Neon Blue Theme</p>
+  </footer>
+
+</body>
+</html>
