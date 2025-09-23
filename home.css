@@ -18,10 +18,10 @@ body {
 ========================== */
 :root {
     --bg-color: #0a0a0a;
-    --text-color: #fff;
+    --text-color: #ffffff;
     --primary-color: #64FFDA;
-    --secondary-color: #6C63FF;
-    --card-bg: #344176 ;
+    --secondary-color: #6863ff;
+    --card-bg: hsla(210, 67%, 37%, 0.847) ;
     --card-shadow: 8px 8px 20px #050505, -8px -8px 20px #1a1a1a;
     --header-bg: rgba(0,0,0,0.6);
     --button-bg: transparent;
@@ -93,7 +93,7 @@ nav a.active-glow {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    background: url('./house.jpg') no-repeat center center/cover;
+    background: url('./villa.jpg') no-repeat center center/cover;
     overflow: hidden;
 }
 
@@ -122,7 +122,7 @@ nav a.active-glow {
     font-size: 48px;
     color: var(--primary-color);
     text-shadow: 0 0 15px var(--primary-color), 0 0 25px var(--secondary-color);
-    animation: shineScale 2s infinite;
+    animation: shineScale 1s infinite;
 }
 @keyframes shineScale {
     0% { transform: scale(1); text-shadow:0 0 10px var(--primary-color),0 0 20px var(--secondary-color);}

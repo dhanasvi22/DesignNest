@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials Section</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #000;
+      color: #fff;
+    }
+
+    .testimonial-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .testimonial-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      color: #00f0ff;
+      text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 35px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .testimonial-card {
+      background: rgba(20, 20, 20, 0.9);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      overflow: hidden;
+      position: relative;
+        justify-content: center;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 0 25px rgba(0, 240, 255, 0.8), 0 0 50px rgba(0, 240, 255, 0.5);
+    }
+
+    .design-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      border: 2px solid #00f0ff;
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+    }
+
+    .client-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .client-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #00f0ff;
+      box-shadow: 0 0 8px #00f0ff;
+    }
+
+    .client-details {
+      text-align: left;
+    }
+
+    .client-name {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #00e5ff;
+    }
+
+    .client-role {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .testimonial-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      font-style: italic;
+      position: relative;
+    }
+
+    .testimonial-text::before {
+      content: "❝";
+      font-size: 2rem;
+      color: #00f0ff;
+      position: absolute;
+      left: -15px;
+      top: -10px;
+      text-shadow: 0 0 8px #00f0ff;
+    }
+
+    .stars {
+      color: #00f0ff;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="testimonial-section">
+    <h2>What Our Clients Say</h2>
+
+    <div class="testimonials">
+      
+      <!-- Card 1 -->
+      <div class="testimonial-card">
+        <img src="./living  room.jpg" alt="Interior Design" class="design-img">
+        <div class="client-info">
+          <img src="images/client1.jpg" alt="Client" class="client-img">
+          <div class="client-details">
+            <div class="client-name">Priya Sharma</div>
+            <div class="client-role">Homeowner</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          The living room design was modern and elegant. It completely transformed my space!
+        </p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="testimonial-card">
+        <img src="./bedroom.jpg" alt="Bedroom Design" class="design-img">
+        <div class="client-info">
+          <img src="images/client2.jpg" alt="Client" class="client-img">
+          <div class="client-details">
+            <div class="client-name">Rahul Verma</div>
+            <div class="client-role">Architect</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          The bedroom layout was innovative and gave a cozy, stylish look. Excellent work!
+        </p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="testimonial-card">
+        <img src="./kitchen.jpg" alt="Kitchen Design" class="design-img">
+        <div class="client-info">
+          <img src="images/client3.jpg" alt="Client" class="client-img">
+          <div class="client-details">
+            <div class="client-name">Sneha Patil</div>
+            <div class="client-role">Interior Enthusiast</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          Loved the modular kitchen design! Very user-friendly and aesthetically pleasing.
+        </p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+
+  
+
+  <!-- 4 -->
+  <div class="testimonial-card">
+    <img src="./office.jpg" alt="Office Design" class="design-img">
+    <div class="client-info">
+      <img src="images/client4.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Rahul Verma</div>
+        <div class="client-role">Corporate Employee</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The workspace design really boosts my productivity and creativity.</p>
+    <div class="stars">⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 1 -->
+  <div class="testimonial-card">
+    <img src="./living room1.jpg" alt="Living Room" class="design-img">
+    <div class="client-info">
+      <img src="images/client1.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Aarav Sharma</div>
+        <div class="client-role">Homeowner</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The living room design transformed my house into a cozy paradise. Absolutely loved it!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 2 -->
+  <div class="testimonial-card">
+    <img src="./bedroom.jpg" alt="Bedroom Design" class="design-img">
+    <div class="client-info">
+      <img src="images/client2.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Priya Deshmukh</div>
+        <div class="client-role">Interior Blogger</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The bedroom design is modern yet peaceful. It feels like a dream space!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 3 -->
+  <div class="testimonial-card">
+    <img src="./kitchen.jpg" alt="Kitchen Design" class="design-img">
+    <div class="client-info">
+      <img src="images/client3.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Sneha Patil</div>
+        <div class="client-role">Interior Enthusiast</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The modular kitchen is both stylish and practical. Cooking feels easier!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 5 -->
+  <div class="testimonial-card">
+    <img src="./dining area.jpg" alt="Dining Area" class="design-img">
+    <div class="client-info">
+      <img src="images/client5.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Ananya Joshi</div>
+        <div class="client-role">Food Blogger</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The dining space feels elegant and perfect for hosting guests.</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 6 -->
+  <div class="testimonial-card">
+    <img src="./bathroom.jpg" alt="Bathroom Design" class="design-img">
+    <div class="client-info">
+      <img src="images/client6.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Manish Agarwal</div>
+        <div class="client-role">Entrepreneur</div>
+      </div>
+    </div>
+    <p class="testimonial-text">Elegant bathroom with modern lighting and fixtures. Feels luxurious!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 7 -->
+  <div class="testimonial-card">
+    <img src="./balcony.jpg" alt="Balcony Design" class="design-img">
+    <div class="client-info">
+      <img src="images/client7.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Kavita Rao</div>
+        <div class="client-role">Teacher</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The balcony design gives a fresh and natural vibe. Perfect morning spot!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 8 -->
+  <div class="testimonial-card">
+    <img src="./villa.jpg" alt="Villa Design" class="design-img">
+    <div class="client-info">
+      <img src="images/client8.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Rohit Mehta</div>
+        <div class="client-role">Businessman</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The villa interior is world-class. Absolutely worth the investment!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 9 -->
+  <div class="testimonial-card">
+    <img src="./kids room.jpg" alt="Kids Room" class="design-img">
+    <div class="client-info">
+      <img src="images/client9.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Simran Kaur</div>
+        <div class="client-role">Mother</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The kids' room is playful, safe, and vibrant. My kids love it!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 10 -->
+  <div class="testimonial-card">
+    <img src="./home theater.jpg" alt="Hall Design" class="design-img">
+    <div class="client-info">
+      <img src="images/client10.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Vikas Singh</div>
+        <div class="client-role">Engineer</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The hall has a great mix of traditional and modern styles.</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 11 -->
+  <div class="testimonial-card">
+    <img src="./study room.jpg" alt="Study Room" class="design-img">
+    <div class="client-info">
+      <img src="images/client11.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Ishita Kulkarni</div>
+        <div class="client-role">Student</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The study room is minimal and focused. Helps me concentrate better.</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 12 -->
+  <div class="testimonial-card">
+    <img src="./garden.jpg" alt="Garden Design" class="design-img">
+    <div class="client-info">
+      <img src="images/client12.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Suresh Iyer</div>
+        <div class="client-role">Retired Officer</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The garden design is peaceful and relaxing. Perfect for evenings.</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 13 -->
+  <div class="testimonial-card">
+    <img src="./lobby design.jpg" alt="Lobby Design" class="design-img">
+    <div class="client-info">
+      <img src="images/client13.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Neha Bansal</div>
+        <div class="client-role">Hotel Manager</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The lobby design is elegant and leaves a great first impression.</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 14 -->
+  <div class="testimonial-card">
+    <img src="./home theater.jpg" alt="Home Theater" class="design-img">
+    <div class="client-info">
+      <img src="images/client14.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Karan Malhotra</div>
+        <div class="client-role">Film Enthusiast</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The home theater feels like a real cinema. Outstanding work!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- 15 -->
+  <div class="testimonial-card">
+    <img src="./tarrace.jpg" alt="Terrace Design" class="design-img">
+    <div class="client-info">
+      <img src="images/client15.jpg" alt="Client" class="client-img">
+      <div class="client-details">
+        <div class="client-name">Ritika Shah</div>
+        <div class="client-role">Architect</div>
+      </div>
+    </div>
+    <p class="testimonial-text">The terrace design is perfect for weekend parties and relaxation.</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+   <section class="testimonials">
+
+
+  
+
+</div>
+</section>
+
+
+    </div>
+  </section>
+
+</body>
+</html>

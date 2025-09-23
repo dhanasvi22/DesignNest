@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Interior & Exterior Design</title>
+  <style>
+    /* ===== Global Styling ===== */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('./office.jpg') no-repeat center center/cover;
+      position: relative;
+    }
+
+    /* Blur overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(3px);
+      z-index: 0;
+    }
+
+    .login-box {
+      position: relative;
+      z-index: 1;
+      background: rgba(20, 20, 20, 0.9);
+      padding: 45px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 162, 255, 0.9);
+      width: 380px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .login-box h2 {
+      color: #00a2ff;
+      margin-bottom: 25px;
+      text-shadow: 0 0 15px #00a2ff, 0 0 30px #00a2ff;
+      font-size: 28px;
+    }
+
+    .input-box {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 14px 15px;
+      border: none;
+      outline: none;
+      border-radius: 12px;
+      background: #111;
+      color: #fff;
+      font-size: 16px;
+      box-shadow: inset 0 0 12px rgba(0, 162, 255, 0.6);
+      transition: 0.3s;
+    }
+
+    .login-box input:focus {
+      box-shadow: 0 0 15px #00a2ff;
+    }
+
+    .login-box input::placeholder {
+      color: #aaa;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .options label {
+      cursor: pointer;
+    }
+
+    .options a {
+      color: #00a2ff;
+      text-decoration: none;
+    }
+
+    .options a:hover {
+      text-decoration: underline;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 14px;
+      background: #00a2ff;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 20px #00a2ff, 0 0 40px rgba(0, 162, 255, 0.5);
+    }
+
+    .login-box button:hover {
+      background: #0086d1;
+      box-shadow: 0 0 25px #00a2ff, 0 0 60px #00a2ff;
+      transform: scale(1.05);
+    }
+
+    .login-box p {
+      margin-top: 25px;
+      color: #ccc;
+    }
+
+    .login-box a {
+      color: #00a2ff;
+      font-weight: bold;
+    }
+
+    .login-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>DesignNest</h2>
+    <!-- Yaha action me apna home page link dalna hai -->
+    <form action="home.html" method="get">
+      <div class="input-box">
+        <input type="text" placeholder="Username or Email" required>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" required>
+      </div>
+
+      <div class="options">
+        <label><input type="checkbox"> Remember Me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <button type="submit">Login</button>
+
+      <p>Don’t have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
+  </div>
+</body>
+</html>
