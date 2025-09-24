@@ -114,8 +114,8 @@
       border: 1px solid var(--dodger-blue);
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
       transition: all 0.4s ease-in-out;
-      cursor: pointer;
       text-align: center;
+      position: relative;
     }
 
     .card:hover {
@@ -155,6 +155,7 @@
       font-weight: bold;
       transition: all 0.3s ease;
       box-shadow: 0 0 10px var(--neon-blue);
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -163,6 +164,32 @@
       transform: scale(1.1);
     }
 
+    /* ==== SUB IMAGES GRID ==== */
+    .sub-images {
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .sub-images img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 15px var(--glow-shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .sub-images img:hover {
+      transform: scale(1.05);
+    }
+
+    .show {
+      display: grid;
+    }
+
+    /* ==== FOOTER ==== */
     footer {
       text-align: center;
       padding: 1rem;
@@ -194,26 +221,73 @@
 
   <!-- MAIN SECTION -->
   <main id="about">
+
+    <!-- Dining -->
     <div class="card">
-      <a href="#"><img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353" alt="Building Facade"></a>
-      <h2>Building Facade</h2>
-      <p>Modern front look with glass walls, textured finishes, and balcony designs.</p>
-      <a href="#" class="btn">Read More</a>
+      <a href="#"><img src="https://i.pinimg.com/1200x/14/a3/41/14a341ff49e6a02f6b6aba5f0f6ee2b7.jpg" alt="Dining" height="500px"></a>
+      <h2>Dining Arrangements</h2>
+      <p>Modern look of the garden with the textured dining table, with green surrounding.</p>
+      <button class="btn" onclick="toggleImages('gallery1')">View More</button>
+      <div id="gallery1" class="sub-images">
+        <img src="https://i.pinimg.com/736x/43/d3/a1/43d3a15647403c8d8aa47b7b0c0e73ba.jpg">
+        <img src="https://i.pinimg.com/736x/9c/9c/7f/9c9c7f12b26c53520fc7e04ddf7f9abd.jpg">
+        <img src="https://i.pinimg.com/736x/d6/05/4a/d6054ad951aa22a857bdd6dbe4b13324.jpg">
+        <img src="https://source.unsplash.com/800x600/?dining,4">
+        <img src="https://source.unsplash.com/800x600/?dining,5">
+        <img src="https://source.unsplash.com/800x600/?dining,6">
+        <img src="https://source.unsplash.com/800x600/?dining,7">
+        <img src="https://source.unsplash.com/800x600/?dining,8">
+        <img src="https://source.unsplash.com/800x600/?dining,9">
+        <img src="https://source.unsplash.com/800x600/?dining,10">
+        <img src="https://source.unsplash.com/800x600/?dining,11">
+        <img src="https://source.unsplash.com/800x600/?dining,12">
+      </div>
     </div>
 
+    <!-- Furniture -->
     <div class="card">
-      <a href="#"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914" alt="Roof Design"></a>
-      <h2>Roof Design</h2>
+      <a href="#"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914" alt="Furniture" height="500px"></a>
+      <h2>Special Furniture</h2>
       <p>Flat, sloped, and green roofs with solar panel integration and neon edge lighting.</p>
-      <a href="#" class="btn">Explore</a>
+      <button class="btn" onclick="toggleImages('gallery2')">View More</button>
+      <div id="gallery2" class="sub-images">
+        <img src="https://source.unsplash.com/800x600/?furniture,1">
+        <img src="https://source.unsplash.com/800x600/?furniture,2">
+        <img src="https://source.unsplash.com/800x600/?furniture,3">
+        <img src="https://source.unsplash.com/800x600/?furniture,4">
+        <img src="https://source.unsplash.com/800x600/?furniture,5">
+        <img src="https://source.unsplash.com/800x600/?furniture,6">
+        <img src="https://source.unsplash.com/800x600/?furniture,7">
+        <img src="https://source.unsplash.com/800x600/?furniture,8">
+        <img src="https://source.unsplash.com/800x600/?furniture,9">
+        <img src="https://source.unsplash.com/800x600/?furniture,10">
+        <img src="https://source.unsplash.com/800x600/?furniture,11">
+        <img src="https://source.unsplash.com/800x600/?furniture,12">
+      </div>
     </div>
 
+    <!-- Shades -->
     <div class="card">
-      <a href="#"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Landscape"></a>
-      <h2>Landscape & Garden</h2>
+      <a href="#"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Shades" height="500px"></a>
+      <h2>Shades and Covering</h2>
       <p>Green lawns, fountains, neon pathway lights, and modern boundary designs.</p>
-      <a href="#" class="btn">View Ideas</a>
+      <button class="btn" onclick="toggleImages('gallery3')">View More</button>
+      <div id="gallery3" class="sub-images">
+        <img src="https://source.unsplash.com/800x600/?shade,1">
+        <img src="https://source.unsplash.com/800x600/?shade,2">
+        <img src="https://source.unsplash.com/800x600/?shade,3">
+        <img src="https://source.unsplash.com/800x600/?shade,4">
+        <img src="https://source.unsplash.com/800x600/?shade,5">
+        <img src="https://source.unsplash.com/800x600/?shade,6">
+        <img src="https://source.unsplash.com/800x600/?shade,7">
+        <img src="https://source.unsplash.com/800x600/?shade,8">
+        <img src="https://source.unsplash.com/800x600/?shade,9">
+        <img src="https://source.unsplash.com/800x600/?shade,10">
+        <img src="https://source.unsplash.com/800x600/?shade,11">
+        <img src="https://source.unsplash.com/800x600/?shade,12">
+      </div>
     </div>
+
   </main>
 
   <!-- FOOTER -->
@@ -221,5 +295,11 @@
     <p>© 2025 Exterior Architecture | Designed in Neon Blue Theme</p>
   </footer>
 
+  <script>
+    function toggleImages(id) {
+      const gallery = document.getElementById(id);
+      gallery.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
