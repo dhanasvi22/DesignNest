@@ -21,7 +21,7 @@ body {
     --text-color: #ffffff;
     --primary-color: #64FFDA;
     --secondary-color: #6863ff;
-    --card-bg: hsla(210, 67%, 37%, 0.847) ;
+    --card-bg: hsla(0, 0%, 2%, 0.847) ;
     --card-shadow: 8px 8px 20px #050505, -8px -8px 20px #1a1a1a;
     --header-bg: rgba(0,0,0,0.6);
     --button-bg: transparent;
@@ -73,7 +73,7 @@ nav a {
     font-size: 18px;
     padding: 8px 12px;
     border-radius: 10px;
-    transition: 0.3s;
+    /* transition: 0.3s; */
     gap: 20px;
 }
 nav a:hover { color: var(--primary-color); }
@@ -125,12 +125,6 @@ nav a.active-glow {
     text-shadow: 0 0 15px var(--primary-color), 0 0 25px var(--secondary-color);
     animation: shineScale 1s infinite;
 }
-@keyframes shineScale {
-    0% { transform: scale(1); text-shadow:0 0 10px var(--primary-color),0 0 20px var(--secondary-color);}
-    50% { transform: scale(1.1); text-shadow:0 0 25px var(--primary-color),0 0 40px var(--secondary-color);}
-    100% { transform: scale(1); text-shadow:0 0 10px var(--primary-color),0 0 20px var(--secondary-color);}
-}
-
 /* Hero Images */
 .hero-images { position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; }
 .hero-img { position:absolute; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity 1s ease-in-out; }
@@ -195,7 +189,7 @@ nav a.active-glow {
     letter-spacing: 1px;
     transition:0.4s;
     box-shadow: 0 0 10px var(--primary-color),0 0 20px var(--secondary-color) inset;
-    animation: pulse 2s infinite;
+    /* animation: pulse 2s infinite; */
 }
 .glow-btn:hover { transform:scale(1.05); background: var(--button-hover-bg); color: var(--bg-color); box-shadow:0 0 20px var(--primary-color),0 0 40px var(--secondary-color);}
 @keyframes pulse { 0%{box-shadow:0 0 10px var(--primary-color),0 0 20px var(--secondary-color) inset;} 50%{box-shadow:0 0 20px var(--primary-color),0 0 40px var(--secondary-color) inset; transform: scale(1.05);} 100%{box-shadow:0 0 10px var(--primary-color),0 0 20px var(--secondary-color) inset; transform: scale(1);} }
@@ -209,9 +203,9 @@ section h2 { font-size:32px; margin-bottom:20px; color:var(--primary-color); tex
 /* ==========================
    CARDS
 ========================== */
-.card-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; margin-top:30px; }
-.neon-card { background:var(--card-bg); border-radius:15px; padding:30px; box-shadow:var(--card-shadow); transition:0.4s; cursor:pointer; animation: cardPulse 3s infinite alternate; }
-.neon-card:hover { transform:translateY(-10px) scale(1.05); box-shadow:0 0 25px var(--primary-color),0 0 40px var(--secondary-color), inset 0 0 15px var(--primary-color);}
+.card-container { 
+                 display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; margin-top:30px; 
+                }
 @keyframes cardPulse { 0%{transform:translateY(0) scale(1);}50%{transform:translateY(-5px) scale(1.02);}100%{transform:translateY(0) scale(1);} }
 
 /* ==========================

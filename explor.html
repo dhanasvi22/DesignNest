@@ -1,0 +1,67 @@
+<header>
+    <div class="hero-overlay" id="hero">
+        <h1>DesignNest</h1>
+    </div>
+    
+    <nav class="navbar">
+        <a href="./index.html" class="nav-link glow-btn active">Home</a>
+        <a href="#interior" class="nav-link glow-btn">Interior</a>
+        <a href="#exterior" class="nav-link glow-btn">Exterior</a>
+        <a href="#gallery" class="nav-link glow-btn">Gallery</a>
+        <a href="#services" class="nav-link glow-btn">Services</a>
+        <a href="http://127.0.0.1:5500/testimonials.html" class="nav-link glow-btn">Testimonials</a>
+        <a href="http://127.0.0.1:5500/blog.html" class="nav-link glow-btn">Blog</a>
+        <a href="http://127.0.0.1:5500/contact.html" class="nav-link glow-btn">Contact</a>
+    </nav>
+</header>
+
+<style>
+/* ===== Header & Navbar Styles ===== */
+header {
+    background: #121212; /* Dark Grey Base */
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,242,255,0.3);
+}
+
+.hero-overlay h1 {
+    color: #00C3FF; /* Electric Blue Glow */
+    font-size: 2.5em;
+    text-align: center;
+    text-shadow: 0 0 10px #00F7FF, 0 0 20px #00C3FF;
+    margin: 0 0 15px 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav-link {
+    color: #FFFFFF; /* White text */
+    background: #121212;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 5px #00F7FF; /* Neon Blue glow */
+}
+
+/* Hover effect */
+.nav-link:hover {
+    background: linear-gradient(45deg, #0072FF, #00C6FF); /* Gradient hover */
+    color: #111; /* Text becomes dark on hover */
+    box-shadow: 0 0 15px rgba(0,242,255,0.8); /* Soft Neon Glow */
+}
+
+/* Active link glow */
+.nav-link.active {
+    box-shadow: 0 0 20px rgba(0,242,255,0.9);
+}
+</style>
+
+
+
